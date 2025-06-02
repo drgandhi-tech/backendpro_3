@@ -1,7 +1,7 @@
 // require('dotenv').config({path:'./env'})
 import dotenv from "dotenv"
 
-
+import { app } from "./src/app.js";
 // import mongoose from "mongoose";
 // import { DB_NAME } from "./constants";
 import express from "express";
@@ -11,6 +11,8 @@ const app = express()
 dotenv.config({
     path: './.env'
 })
+
+// const PORT = process.env.PORT || 8000;
 
 connectDB()
 .then(() =>{
